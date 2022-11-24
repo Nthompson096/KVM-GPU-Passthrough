@@ -1,6 +1,6 @@
 # Single KVM-GPU-Passthrough
 
-***THIS GUIDE IS MEANT FOR Arch/Deb LINUX USERS***
+***THIS GUIDE IS MEANT FOR Pac/Apt LINUX USERS***
 
 ### Preparations
 
