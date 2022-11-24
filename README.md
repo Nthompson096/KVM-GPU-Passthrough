@@ -45,7 +45,13 @@ for Intel:
 
 	chmod +x grub_setup_intel.sh
 
+AMD: 
+
+	sudo ./grub_setup_amd.sh 
+
+
 3) Then run either of these scripts:	
+
 4) AMD: 
 
 		sudo ./grub_setup_amd.sh 
