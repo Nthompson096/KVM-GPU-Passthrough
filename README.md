@@ -47,7 +47,7 @@ for Intel:
 
 AMD: 
 
-	sudo ./grub_setup_amd.sh 
+	chmod +x ./grub_setup_amd.sh 
 
 
 3) Then run either of these scripts:	
