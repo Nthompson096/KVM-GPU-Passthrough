@@ -69,7 +69,7 @@ AMD:
 
 To configure libvirt chmod +x the appropriate script for your distro which configures libvirt and QEMU for you by typing 
 	
-	sudo sh ./libvirt_configuration.sh
+	sudo sh ./libvirt_configuration_distroname.sh
 	
 
 ### Important for Ubuntu users:
