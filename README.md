@@ -203,6 +203,30 @@ For the VM to actually pass the gpu, you need to add the PCI device to your VM. 
   
   3) usb redirect any usb devices that are having issues, i would redirect your headset for headset users and the mouse.
   add hardware > usb host device > the desired device
+
+I may also add, you can also use evdev along with USB passthough with your device with the following:
+	
+```inside /etc/libvirt/qemu.conf```
+	
+	user = "nicholas"
+	group = "kvm"
+	#
+	cgroup_device_acl = [
+	“/dev/null”, “/dev/full”, “/dev/zero”,
+	“/dev/random”, “/dev/urandom”,
+	“/dev/ptmx”, “/dev/kvm”, “/dev/kqemu”,
+	“/dev/rtc”,"/dev/hpet",
+	“/dev/input/by-id/KEYBOARD_NAME”,
+	“/dev/input/by-id/MOUSE_NAME”
+	]
+
+
+	qemu:commandline
+	<qemu:arg value=’-object’/>
+	<qemu:arg value=‘input-linux,id=mouse1,evdev=/dev/input/by-id/ckb-CORSAIR_M65_RGB_ELITE_Gaming_Mouse_vM_-event’/>
+	<qemu:arg value=’-object’/>
+	<qemu:arg value=‘input-linux,id=kbd1,evdev=/dev/input/by-id/ckb-Corsair_Gaming_K70_LUX_RGB_Keyboard_vKB_-event,grab_all=on,repeat=on’/>
+	</qemu:commandline>
   
   ![oU1II4D](https://user-images.githubusercontent.com/68661602/150458011-ba7da45d-dfd9-41fe-a7e4-901a2aa0c433.png)
 
