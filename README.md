@@ -220,6 +220,7 @@ I may also add, you can also use evdev along with USB passthough with your devic
 	“/dev/input/by-id/MOUSE_NAME”
 	]
 
+```inside your VM:```
 
 	qemu:commandline
 	<qemu:arg value=’-object’/>
