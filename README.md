@@ -227,9 +227,9 @@ For the VM to actually pass the gpu, you need to add the PCI device to your VM. 
 
 	qemu:commandline
 	<qemu:arg value=’-object’/>
-	<qemu:arg value=‘input-linux,id=mouse1,evdev=/dev/input/by-id/ckb-CORSAIR_M65_RGB_ELITE_Gaming_Mouse_vM_-event’/>
+	<qemu:arg value=‘input-linux,id=mouse1,evdev=/dev/input/by-id/MOUSE_NAME-event’/>
 	<qemu:arg value=’-object’/>
-	<qemu:arg value=‘input-linux,id=kbd1,evdev=/dev/input/by-id/ckb-Corsair_Gaming_K70_LUX_RGB_Keyboard_vKB_-event,grab_all=on,repeat=on’/>
+	<qemu:arg value=‘input-linux,id=kbd1,evdev=/dev/input/by-id/KEYBOARD_NAME-event,grab_all=on,repeat=on’/>
 	</qemu:commandline>
   
   <img src=https://user-images.githubusercontent.com/68661602/150458011-ba7da45d-dfd9-41fe-a7e4-901a2aa0c433.png width="70%"/>
