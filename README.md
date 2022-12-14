@@ -103,7 +103,7 @@ For 20.04 LTS, use different PPA as shown below:
 
 8) Lastly, go into your boot settings and make sure that your optical disk is checked.
 
-![Screen Capture_virt-manager_20211203210927](https://user-images.githubusercontent.com/77298458/144698047-39cfddde-aa28-4d4c-8f0b-bff81a5c21ca.png)
+<img src=https://user-images.githubusercontent.com/77298458/144698047-39cfddde-aa28-4d4c-8f0b-bff81a5c21ca.png width="70%"/>
 
 9) And then you should be able to click begin installation!
 10) After you finish installing windows, you should be good to shut down the VM and follow along with the next steps.
@@ -142,7 +142,7 @@ just simply follow the instructions on how to save the vbios in linux, do not wr
 
 1) [Go to this download link](https://www.techpowerup.com/vgabios/) and download the ROM of your ***exact*** GPU (or do some google-fu).
 
-![Screen Capture_select-area_20211203200439](https://user-images.githubusercontent.com/77298458/144696258-5a424e34-236a-4e20-adf7-723068707712.png)
+<img src=https://user-images.githubusercontent.com/77298458/144696258-5a424e34-236a-4e20-adf7-723068707712.png width="70%"/>
 
 2) Once you have your rom downloaded, type in ``sudo pacman -S bless`` to download the hex editor to patch your rom.
   
@@ -150,11 +150,11 @@ just simply follow the instructions on how to save the vbios in linux, do not wr
   
 4) Press CTRL + F to search, and search for "VIDEO" as text.
 
-![Screen Capture_select-area_20211203201054](https://user-images.githubusercontent.com/77298458/144696438-6e7afb3e-b808-4bc7-a0be-8683c046f445.png)
+<img src=https://user-images.githubusercontent.com/77298458/144696438-6e7afb3e-b808-4bc7-a0be-8683c046f445.png width="70%"/>
 
 5) Then, delete everything before the "U.s" or "U.y" or whatever, and save your ROM as something simple (i.e: patch.rom).
   
-![Screen Capture_select-area_20211203201250](https://user-images.githubusercontent.com/77298458/144696539-44ce50f6-c6fd-4d2d-9564-3be3fd663585.png)
+<img src=https://user-images.githubusercontent.com/77298458/144696539-44ce50f6-c6fd-4d2d-9564-3be3fd663585.png width="70%"/>
  
 6) Once your ROM has been patched, open your terminal in the folder which you have your ROM saved in, and type in <br/>
 
@@ -188,18 +188,19 @@ For the VM to actually pass the gpu, you need to add the PCI device to your VM. 
 
 *Before we edit pass through our GPU, make sure to enable XML editing.*
   
-![Screen Capture_virt-manager_20211204070245](https://user-images.githubusercontent.com/77298458/144714348-ef5a9437-624e-41f7-b94f-9889722c993a.png)
+<img src=https://user-images.githubusercontent.com/77298458/144714348-ef5a9437-624e-41f7-b94f-9889722c993a.png width="70%"/>
 
 
 ***NOTE: This is great if you're trying to use software that has macros for gaming on a keyboard/mouse, would highly recommend doing this instead of doing a full USB 3.0 passthough as it will detect the mouse and keyboard potentially as a generic interface.***
 
   1) Add every PCI device which has to do with your graphics card to the VM.
 
-  ![Screen Capture_select-area_20211204064804](https://user-images.githubusercontent.com/77298458/144713848-a7918b97-5e1c-4961-b9ec-a9fc1259d777.png)
+<img src=https://user-images.githubusercontent.com/77298458/144713848-a7918b97-5e1c-4961-b9ec-a9fc1259d777.png width="70%"/>
+
 
   2) Pass through your audio device and your USB controller.
   
-  ![Screen Capture_virt-manager_20211204065241](https://user-images.githubusercontent.com/77298458/144714016-bf504808-f7ff-4a2f-b533-540d596e794c.png)
+<img src=https://user-images.githubusercontent.com/77298458/144714016-bf504808-f7ff-4a2f-b533-540d596e794c.png width="70%"/>
   
   3) usb redirect any usb devices that are having issues, i would redirect your headset for headset users and the mouse.
   add hardware > usb host device > the desired device
@@ -231,7 +232,7 @@ For the VM to actually pass the gpu, you need to add the PCI device to your VM. 
 	<qemu:arg value=‘input-linux,id=kbd1,evdev=/dev/input/by-id/ckb-Corsair_Gaming_K70_LUX_RGB_Keyboard_vKB_-event,grab_all=on,repeat=on’/>
 	</qemu:commandline>
   
-  ![oU1II4D](https://user-images.githubusercontent.com/68661602/150458011-ba7da45d-dfd9-41fe-a7e4-901a2aa0c433.png)
+  <img src=https://user-images.githubusercontent.com/68661602/150458011-ba7da45d-dfd9-41fe-a7e4-901a2aa0c433.png width="70%"/>
 
   5) Remember the ROM we patched? Well we're gonna use it now. 
 
@@ -239,15 +240,15 @@ For the VM to actually pass the gpu, you need to add the PCI device to your VM. 
   <br/> ``<rom file="/var/lib/libvirt/vbios/<ROMFILE>.rom"/>``. <br/>
   Make sure to rename ROMFILE to what you named your ROM.
 
-  ![Screen Capture_virt-manager_20211204071027](https://user-images.githubusercontent.com/77298458/144714606-ac7d7cfe-b567-492a-a863-08557a58b5c8.png)
+<img src=https://user-images.githubusercontent.com/77298458/144714606-ac7d7cfe-b567-492a-a863-08557a58b5c8.png width="70%"/>
 
   7) Lastly, remove every spice/qxl device from your virtual machine
 
-  ![Screen Capture_virt-manager_20211204071816](https://user-images.githubusercontent.com/77298458/144714841-974cdf8e-57ef-448f-ae2a-cd45809ddae2.png)
+<img src=https://user-images.githubusercontent.com/77298458/144714841-974cdf8e-57ef-448f-ae2a-cd45809ddae2.png width="70%"/>
 
   8) If you are using an NVIDIA graphics card, add these lines to your XML overview. Also this could be used to hide your VM so I would go ahead an add anyway, be sure to turn ON hyper-v in windows features.
   
-  ![Ic8UR0g](https://user-images.githubusercontent.com/68661602/150457603-8bb1662e-ba13-4a07-baad-7666bebb6088.png)
+<img src=https://user-images.githubusercontent.com/68661602/150457603-8bb1662e-ba13-4a07-baad-7666bebb6088.png width="70%"/>
   <br/>
   <br/>
   ### The clock and Hyper-v mode
@@ -375,7 +376,7 @@ This is usefull for people who want to name their VMs to something other than wi
 
 2) On the line with the if then statement, add in ``|| [[ $OBJECT == "RENAME TO YOUR VM" ]]`` before the ``;``.
 
-![Screen Capture_select-area_20211204074514](https://user-images.githubusercontent.com/77298458/144715662-f66088d0-d0b7-44f7-a515-2df7419af11e.png)
+<img src=https://user-images.githubusercontent.com/77298458/144715662-f66088d0-d0b7-44f7-a515-2df7419af11e.png width="70%"/>
 
 3) Now you should be good to turn on your VM! On Windows drivers will auto install.
 
