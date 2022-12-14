@@ -249,8 +249,7 @@ For the VM to actually pass the gpu, you need to add the PCI device to your VM. 
   8) If you are using an NVIDIA graphics card, add these lines to your XML overview. Also this could be used to hide your VM so I would go ahead an add anyway, be sure to turn ON hyper-v in windows features.
   
 <img src=https://user-images.githubusercontent.com/68661602/150457603-8bb1662e-ba13-4a07-baad-7666bebb6088.png width="70%"/>
-  <br/>
-  <br/>
+
   ### The clock and Hyper-v mode
 
 	   </os>
@@ -366,6 +365,7 @@ Also be sure to chmod +x binary as an executable as sudo.
 	xxd -r -p > ./qemu-system-x86_64-pass
     
 ### Editing hooks
+
 This is usefull for people who want to name their VMs to something other than win10.
 
 1) Edit the hooks script by typing 
