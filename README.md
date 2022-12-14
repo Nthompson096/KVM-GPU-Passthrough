@@ -201,7 +201,7 @@ For the VM to actually pass the gpu, you need to add the PCI device to your VM. 
   
   ![Screen Capture_virt-manager_20211204065241](https://user-images.githubusercontent.com/77298458/144714016-bf504808-f7ff-4a2f-b533-540d596e794c.png)
   
-  3) usb redirect any usb devices that are having issues, i would redirect your headset for headset users and the mouse.
+###  3) usb redirect any usb devices that are having issues, i would redirect your headset for headset users and the mouse.
   add hardware > usb host device > the desired device
 
  ### 4) USB redirect with evdev
@@ -233,19 +233,19 @@ For the VM to actually pass the gpu, you need to add the PCI device to your VM. 
   
   ![oU1II4D](https://user-images.githubusercontent.com/68661602/150458011-ba7da45d-dfd9-41fe-a7e4-901a2aa0c433.png)
 
-  5) Remember the ROM we patched? Well we're gonna use it now. 
+###  5) Remember the ROM we patched? Well we're gonna use it now. 
 
-  6) Edit the XML of each passed through PCI device that has to do with your GPU and add the line 
+ ### 6) Edit the XML of each passed through PCI device that has to do with your GPU and add the line 
   <br/> ``<rom file="/var/lib/libvirt/vbios/<ROMFILE>.rom"/>``. <br/>
   Make sure to rename ROMFILE to what you named your ROM.
 
   ![Screen Capture_virt-manager_20211204071027](https://user-images.githubusercontent.com/77298458/144714606-ac7d7cfe-b567-492a-a863-08557a58b5c8.png)
 
-  7) Lastly, remove every spice/qxl device from your virtual machine
+###  7) Lastly, remove every spice/qxl device from your virtual machine
 
   ![Screen Capture_virt-manager_20211204071816](https://user-images.githubusercontent.com/77298458/144714841-974cdf8e-57ef-448f-ae2a-cd45809ddae2.png)
 
-  8) If you are using an NVIDIA graphics card, add these lines to your XML overview. Also this could be used to hide your VM so I would go ahead an add anyway, be sure to turn ON hyper-v in windows features.
+ ### 8) If you are using an NVIDIA graphics card, add these lines to your XML overview. Also this could be used to hide your VM so I would go ahead an add anyway, be sure to turn ON hyper-v in windows features.
   
   ![Ic8UR0g](https://user-images.githubusercontent.com/68661602/150457603-8bb1662e-ba13-4a07-baad-7666bebb6088.png)
   <br/>
