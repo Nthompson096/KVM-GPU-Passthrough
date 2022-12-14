@@ -356,7 +356,7 @@ You also need to patch the binary of qemu-system-x86_64, you can cp the file ins
 
 do the following below.
 
-Here is the shell command, save the script and run the script if you are running it inside /usr/bin as sudo, otherwise save it to where you copied the emulator; edit the values when needed.
+Here is the shell command, save the script and run the script if you are running it inside /usr/bin as sudo, otherwise save it to where you copied the emulator; edit the values when needed (also if saving to /usr/bin be sure to run as root).
 Also be sure to chmod +x binary as an executable as sudo.
 
 	#!/bin/bash
