@@ -208,7 +208,7 @@ I may also add, you can also use evdev along with USB passthough with your devic
 	
 ```inside /etc/libvirt/qemu.conf```
 	
-	user = "nicholas"
+	user = "username"
 	group = "kvm"
 	#
 	cgroup_device_acl = [
@@ -219,6 +219,8 @@ I may also add, you can also use evdev along with USB passthough with your devic
 	“/dev/input/by-id/KEYBOARD_NAME”,
 	“/dev/input/by-id/MOUSE_NAME”
 	]
+	
+*notice*: if you are having issues with permisisons and you've added yourself to the KVM group add yourself to the qemu.conf like above.
 
 ```inside your VM:```
 
