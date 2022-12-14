@@ -357,7 +357,7 @@ and
  
 for the semiconductor info and serial number, cannot find the serial number? Then it shouldn't matter much and you can use the value provided or open her up (welcome to the real world) and look for a sticker.
 	
-You also need to patch the binary of qemu-system-x86_64, you can cp the file inside a new dir from /usr/bin/qemu-system-x86_64 to a new file such as /home/<username>/patch/qemu/qemu-system-x86_64, or you may keep it inside it's current directory with a new name such as the one listed above for safe keeping; be sure to run sudo.
+You also need to patch the binary of qemu-system-x86_64, you can cp the file inside a new dir from /usr/bin/qemu-system-x86_64 to a new file such as /home/"username"/patch/qemu/qemu-system-x86_64, or you may keep it inside it's current directory with a new name such as the one listed above for safe keeping; be sure to run sudo.
 
 ***I have an error about /qemu-7.0.0/accel/accel-softmmu.c:82:accel_init_ops_interfaces: assertion failed: (ops != NULL)***
 
