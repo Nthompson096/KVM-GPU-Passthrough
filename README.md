@@ -231,6 +231,8 @@ For the VM to actually pass the gpu, you need to add the PCI device to your VM. 
 	<qemu:arg value=’-object’/>
 	<qemu:arg value=‘input-linux,id=kbd1,evdev=/dev/input/by-id/KEYBOARD_NAME-event,grab_all=on,repeat=on’/>
 	</qemu:commandline>
+	
+*USB Host Redirection example*
   
   <img src=https://user-images.githubusercontent.com/68661602/150458011-ba7da45d-dfd9-41fe-a7e4-901a2aa0c433.png width="70%"/>
 
