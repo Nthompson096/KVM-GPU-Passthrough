@@ -283,7 +283,7 @@ To make sure virtual machine is not found in the VM set feature hypervisor off l
 	   
 Be aware that you'd have to edit the amount of core/socks/threads to reflect on the amount of vcpu placments like so
 
-  	   <vcpu placement="static">6</vcpu>
+  	   <vcpu placement="static">4</vcpu>
 	   
 and that ```<feature policy="disable" name="hypervisor"/>``` hides the hypervisor.
 	   
