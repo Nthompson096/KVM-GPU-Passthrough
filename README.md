@@ -337,6 +337,18 @@ The Emulator Path, edit accordingly.
     <devices>
     <emulator>/path/to/qemu-system-x86_64-pass</emulator>
 	
+	
+And the QEMU Command Line
+	
+    <qemu:commandline>
+    <qemu:arg value="-smbios"/>
+    <qemu:arg value="type=2,manufacturer=ASRock,product=X470 Taichi,version=AM4,serial=S4M88119"/>
+    <qemu:arg value="-smbios"/>
+    <qemu:arg value="type=4,manufacturer=AMD,version=1000"/>
+    <qemu:arg value="-smbios"/>
+    <qemu:arg value="type=17,manufacturer=Micron"/>
+    </qemu:commandline>
+	
 
 Also do not forgot to set your smbios mode to host like so if all else fails:
 
