@@ -403,6 +403,9 @@ then delete the entry with
 
 
 	efibootmgr -b # -B #
+	
+
+There is a GUI for efibootmgr, you can check out this repo from [Elinvention](https://github.com/Elinvention/efiboots)
 
 
 Be careful doing this as this can mess up booting from EFI-bios, be sure to know what you are doing.
