@@ -252,7 +252,7 @@ For the VM to actually pass the gpu, you need to add the PCI device to your VM. 
   
 <img src=https://user-images.githubusercontent.com/68661602/150457603-8bb1662e-ba13-4a07-baad-7666bebb6088.png width="70%"/>
 
-  ### The clock and Hyper-v mode
+  ### Features:
 
 	   </os>
 	   <features>
@@ -273,10 +273,22 @@ For the VM to actually pass the gpu, you need to add the PCI device to your VM. 
 	   <vmport state="off"/>
 	   <ioapic driver="kvm"/>
 	   </features>
+
+To make sure virtual machine is not found in the VM set feature hypervisor off like so under CPU:
+	   
 	   <cpu mode="host-passthrough" check="none" migratable="on">
 	   <topology sockets="1" dies="1" cores="2" threads="2"/>
 	   <feature policy="disable" name="hypervisor"/>
 	   </cpu>
+	   
+Be aware that you'd have to edit the amount of core/socks/threads to reflect on the amount of vcpu placments like so
+
+  	   <vcpu placement="static">6</vcpu>
+	   
+and that ```<feature policy="disable" name="hypervisor"/>``` hides the hypervisor.
+	   
+clock settings:
+	   
 	   <clock offset="localtime">
 	   <timer name="rtc" tickpolicy="catchup"/>
 	   <timer name="pit" tickpolicy="delay"/>
