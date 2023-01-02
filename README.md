@@ -352,6 +352,7 @@ And the QEMU Command Line
 Also do not forgot to set your smbios mode to host like so if all else fails:
 
     <smbios mode="host"/>
+    </os>
 
 You can use other manufacturers such as gigabyte, asus, etc; if you want to reflect on your physical motherboard be sure to look at the specs at the website of the manufacturer, usually found at the motherboards website (usually it's the CPU and stuff) after pulling up 
 	
