@@ -349,7 +349,7 @@ And the QEMU Command Line
     </qemu:commandline>
 	
 
-Also do not forgot to set your smbios mode to host like so:
+Also do not forgot to set your smbios mode to host like so if all else fails:
 
     <smbios mode="host"/>
 
