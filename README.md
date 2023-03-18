@@ -206,32 +206,9 @@ For the VM to actually pass the gpu, you need to add the PCI device to your VM. 
   add hardware > usb host device > the desired device
 
  ### 4) USB redirect with evdev
-	
-```inside /etc/libvirt/qemu.conf```
-	
-	user = "username"
-	group = "kvm"
-	#
-	cgroup_device_acl = [
-	“/dev/null”, “/dev/full”, “/dev/zero”,
-	“/dev/random”, “/dev/urandom”,
-	“/dev/ptmx”, “/dev/kvm”, “/dev/kqemu”,
-	“/dev/rtc”,"/dev/hpet",
-	“/dev/input/by-id/KEYBOARD_NAME”,
-	“/dev/input/by-id/MOUSE_NAME”
-	]
-	
-*notice*: if you are having issues with permisisons and you've added yourself to the KVM group add yourself to the qemu.conf like above.
 
-```inside your VM:```
+[archwiki](https://wiki.archlinux.org/title/PCI_passthrough_via_OVMF#Passing_keyboard/mouse_via_Evdev)
 
-	qemu:commandline
-	<qemu:arg value=’-object’/>
-	<qemu:arg value=‘input-linux,id=mouse1,evdev=/dev/input/by-id/MOUSE_NAME-event’/>
-	<qemu:arg value=’-object’/>
-	<qemu:arg value=‘input-linux,id=kbd1,evdev=/dev/input/by-id/KEYBOARD_NAME-event,grab_all=on,repeat=on’/>
-	</qemu:commandline>
-	
 *USB Host Redirection example*
   
   <img src=https://user-images.githubusercontent.com/68661602/150458011-ba7da45d-dfd9-41fe-a7e4-901a2aa0c433.png width="70%"/>
